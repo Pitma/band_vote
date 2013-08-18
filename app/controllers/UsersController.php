@@ -364,8 +364,8 @@ class UsersController extends BaseController {
         if ($picture_file)
         {
 
-        $pic_destinationPath = 'uploads/pics/'.str_random(10);
-        $pic_filename = $picture_file->getClientOriginalName();
+        $pic_destinationPath = 'uploads/pics/';
+        $pic_filename = str_random(13).'.'.$picture_file->getClientOriginalExtension();
         //$extension =$file->getClientOriginalExtension(); 
         $pic_upload_success = Input::file('picture')->move($pic_destinationPath, $pic_filename);
 
@@ -383,8 +383,8 @@ class UsersController extends BaseController {
         if ($music_file)
         {
         
-        $music_destinationPath = 'uploads/music/'.str_random(10);
-        $music_filename = $music_file->getClientOriginalName();
+        $music_destinationPath = 'uploads/music/';
+        $music_filename = .str_random(13).'.'.$music_file->getClientOriginalName();
         //$extension =$file->getClientOriginalExtension(); 
         $music_upload_success = Input::file('musica')->move($music_destinationPath, $music_filename);
 
