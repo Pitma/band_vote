@@ -15,9 +15,17 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	protected $layout = 'layouts.master';
+
+	public function index()
 	{
-		return View::make('hello');
+		
+		$ip = Request::getClientIp();
+
+		$this->layout->title = "Willkommen bei Amalive.de";
+		$this->layout->content = View::make('hello');
+
+			
 	}
 
 }

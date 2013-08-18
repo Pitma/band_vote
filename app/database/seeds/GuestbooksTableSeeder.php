@@ -5,7 +5,7 @@ class GuestbooksTableSeeder extends Seeder {
     public function run()
     {
     	// Uncomment the below to wipe the table clean before populating
-    	 DB::table('guestbooks')->delete();
+    	 //DB::table('guestbooks')->delete();
 
         $guestbooks = array(
  			array(

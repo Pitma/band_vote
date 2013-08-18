@@ -38,6 +38,21 @@ Route::filter('auth', function()
 	if (Auth::guest()) return Redirect::guest('login');
 });
 
+Route::filter('isAdmin', function()
+{
+	if (Auth::User()->admin ==! 1) return Redirect::to('login');
+});
+
+Route::filter('voteIsAllowed', function()
+{
+	if (!Vote::$voteIsAllowed) 
+		{	
+		Notification::info('Das Voting hat noch nicht begonnen!');
+
+		return Redirect::to('users');
+		}
+		
+});
 
 Route::filter('auth.basic', function()
 {

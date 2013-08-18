@@ -25,7 +25,8 @@ return array(
 	| you may use many connections at once using the Database library.
 	|
 	*/
-
+	//'default' => 'qubism',
+	//'default' => 'mysql_live',
 	'default' => 'mysql',
 
 	/*
@@ -52,12 +53,32 @@ return array(
 			'prefix'   => '',
 		),
 
+		'mysql_live' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'usr_web973_4',
+			'username'  => 'web973',
+			'password'  => 'holyboy',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'band',
 			'username'  => 'root',
 			'password'  => '',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+		'qubism' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'd017948c',
+			'username'  => 'd017948c',
+			'password'  => 'aMa4live',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -1,7 +1,19 @@
 <IfModule mod_rewrite.c>
+
+	SetEnvIf Host band-vote.dev passreq
+	AuthType Basic
+	AuthName "Password Required"
+	AuthUserFile c:/wamp/www/band_vote/pass/.htpasswd
+	Require valid-user
+	Order allow,deny
+	Allow from all
+	Deny from env=passreq
+	Satisfy any
+
 	Options -MultiViews
 	RewriteEngine On
 
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteRule ^ index.php [L]
+
 </IfModule>

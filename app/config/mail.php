@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'smtp',
+	'driver' => 'mail',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'patrickmainka@googlemail.com', 'name' => 'Patrick Laravel Mainka'),
+	'from' => array('address' => 'patrickmainka@gmail.com', 'name' => 'PatrickM'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -81,6 +81,7 @@ return array(
 	*/
 
 	'username' => 'patrickmainka@gmail.com',
+	//'username' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +94,8 @@ return array(
 	|
 	*/
 
-	'password' => 'holyboy123',
+	
+	'password' => '',
 
 	/*
 	|--------------------------------------------------------------------------

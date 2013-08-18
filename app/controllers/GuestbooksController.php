@@ -2,9 +2,12 @@
 
 class GuestbooksController extends BaseController {
 
+    protected $layout = 'layouts.master';
+
      public function __construct()
     {
-       
+    
+        
 
     }
 
@@ -16,8 +19,10 @@ class GuestbooksController extends BaseController {
     public function index()
     {
         //
-        return View::make('guestbooks.index')
+        $this->layout->title   = 'Das Gästebuch von AMALIVE.de';
+        $this->layout->content = View::make('guestbooks.index')
         ->with('guestbooks', Guestbook::all());
+      
     }
 
     /**
@@ -50,6 +55,7 @@ class GuestbooksController extends BaseController {
         $validation = Validator::make($entry, Guestbook::$rules);
         if($validation->fails())
         {
+            Notification::error('Beitrag konnte nicht gespeichert werden!');
             return Redirect::to('guestbooks')
                         ->withinput()
                         ->witherrors($validation);

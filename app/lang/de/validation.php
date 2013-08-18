@@ -13,8 +13,8 @@ return array(
 	|
 	*/
 
-	"accepted"         => "The :attribute must be accepted.",
-	"active_url"       => "The :attribute is not a valid URL.",
+	"accepted"         => "Die :attribute müssen gelesen und akzeptiert werden.",
+	"active_url"       => "Keine gültige URL",
 	"after"            => "The :attribute must be a date after :date.",
 	"alpha"            => "The :attribute may only contain letters.",
 	"alpha_dash"       => "The :attribute may only contain letters, numbers, and dashes.",
@@ -33,13 +33,14 @@ return array(
 	"digits_between"   => "The :attribute must be between :min and :max digits.",
 	"email"            => "Keine gültige Emailadresse.",
 	"exists"           => "The selected :attribute is invalid.",
-	"image"            => "The :attribute must be an image.",
+	"image"            => "Es werden nur Bilddateien akzeptiert",
+	"audio"            => "Es werden nur Audiodateien akzeptiert",
 	"in"               => "The selected :attribute is invalid.",
 	"integer"          => "The :attribute must be an integer.",
 	"ip"               => "The :attribute must be a valid IP address.",
 	"max"              => array(
 		"numeric" => "The :attribute may not be greater than :max.",
-		"file"    => "The :attribute may not be greater than :max kilobytes.",
+		"file"    => "Die Datei darf nicht größer als :max Kilobyte sein.",
 		"string"  => "The :attribute may not be greater than :max characters.",
 	),
 	"mimes"            => "The :attribute must be a file of type: :values.",
@@ -61,8 +62,9 @@ return array(
 		"file"    => "The :attribute must be :size kilobytes.",
 		"string"  => "The :attribute must be :size characters.",
 	),
-	"unique"           => "The :attribute has already been taken.",
-	"url"              => "The :attribute format is invalid.",
+	"unique"           => "Dieser Name existiert leider schon vergeben!",
+	"url"              => "Keine gültige URL",
+	"recaptcha" => 'Eingabe stimmt nicht überein.',
 
 	/*
 	|--------------------------------------------------------------------------

@@ -26,7 +26,8 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	//'url' => 'band-vote.dev/',
+	'url' => 'http://test.amalive.de/',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +40,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'Europe/Berlin',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -115,7 +116,10 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Krucas\Notification\NotificationServiceProvider',
-
+		'Way\Console\GuardLaravelServiceProvider',
+		'Greggilbert\Recaptcha\RecaptchaServiceProvider',
+		
+		
 
 	),
 
@@ -181,7 +185,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'Notification' => 'Krucas\Notification\Facades\Notification',
+		'Notification' 	  => 'Krucas\Notification\Facades\Notification',
+
 
 	),
 
