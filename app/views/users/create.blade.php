@@ -137,8 +137,10 @@
           
        </div>
     </div>
-    {{ Form::captcha(array('theme' => 'clean'))}}
-    {{ $errors->first('recaptcha_response_field','<span class="text-error">:message</span>') }}
+    {{-- Form::captcha(array('theme' => 'clean')) --}}
+    {{ HTML::image(Captcha::img(), 'Captcha image') }} 
+    {{ Form::text('captcha') }}
+    {{ $errors->first('captcha','<span class="text-error">:message</span>') }}
     <hr>
     {{ Form::submit('Registrieren') }}
     {{ Form::close() }}

@@ -58,20 +58,22 @@ class VotesController extends BaseController {
      */
     public function store()
     {
-        $this->beforeFilter('voteIsAllowed');
+        //$this->beforeFilter('voteIsAllowed');
         //Secure CSRF
-        $this->beforeFilter('csrf');
+        //$this->beforeFilter('csrf');
 
          //Get Input
         $entry = array(
                 'band_id' => Input::get('user_id'),
-                'recaptcha_response_field' => Input::get('recaptcha_response_field'),
+                //'recaptcha_response_field' => Input::get('recaptcha_response_field'),
+                'captcha' => Input::get('captcha'),
 
             );
        
         $rules = array(
             'band_id' => 'required',
-            'recaptcha_response_field' => 'required|recaptcha',
+            //'recaptcha_response_field' => 'required|recaptcha',
+            'captcha' => 'required|captcha',
             );
         $validation = Validator::make($entry,$rules);
         if(!$validation->fails())

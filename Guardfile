@@ -1,6 +1,6 @@
 guard :concat, :type => "css", :files => %w[bootstrap.min jquery.countdown main], :input_dir => "public/css", :output => "public/css/styles.min"
 
-guard :concat, :type => "js", :files => %w[html5shiv jquery.countdown-de jquery.countdown modernizr.custom.70211], :input_dir => "public/js", :output => "public/js/scripts.min"
+guard :concat, :type => "js", :files => %w[audiojs\audiojs.swf audiojs\player-graphics.gif bootstrap css3-mediaqueries html5shiv jquery.countdown-de jquery.countdown jquery modernizr.custom.70211 respond], :input_dir => "public/js", :output => "public/js/scripts.min"
 
 # Refresh the browser on save
 guard 'livereload' do

@@ -46,7 +46,9 @@
 		@if($voteIsAllowed)
 		<p>Fülle einfach den Captcha aus und dein Vote wird gezählt!</p>
 		{{ Form::open(array('route' => 'votes.store')) }}
-		{{ Form::captcha(array('theme' => 'clean'))}}
+		{{-- Form::captcha(array('theme' => 'clean')) --}}
+		{{ HTML::image(Captcha::img(), 'Captcha image') }} 
+		{{ Form::text('captcha') }}
 		@else
 		<p>Leider hat das Voting hat noch nicht begonnen! </p>
 		@endif

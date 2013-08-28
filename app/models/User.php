@@ -3,6 +3,7 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
+
 class User extends Eloquent implements UserInterface, RemindableInterface {
 	
 	 protected $guarded = array();
@@ -31,7 +32,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         'picture' => 'image|max:2000',	
 		'music' => 'audio|max:8000',
 		'youtube' => 'url',
-		'recaptcha_response_field' => 'required|recaptcha',
+		//'recaptcha_response_field' => 'required|recaptcha',
+		'captcha' => 'required|captcha',
 		'password_edit' => 'min:5',
 	
     	);

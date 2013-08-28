@@ -25,9 +25,9 @@ return array(
 	| you may use many connections at once using the Database library.
 	|
 	*/
-	//'default' => 'qubism',
+	'default' => 'qubism',
 	//'default' => 'mysql_live',
-	'default' => 'mysql',
+	//'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------

@@ -118,6 +118,7 @@ return array(
 		'Krucas\Notification\NotificationServiceProvider',
 		'Way\Console\GuardLaravelServiceProvider',
 		'Greggilbert\Recaptcha\RecaptchaServiceProvider',
+		'Mews\Captcha\CaptchaServiceProvider',
 		
 		
 
@@ -186,6 +187,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Notification' 	  => 'Krucas\Notification\Facades\Notification',
+		'Captcha' 		  => 'Mews\Captcha\Facades\Captcha',
 
 
 	),

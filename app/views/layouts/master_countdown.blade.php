@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>.::AMALIVE.de::. {{ $title }}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=0.5">
     <meta name="description" content="">
     <meta name="author" content="">
 	

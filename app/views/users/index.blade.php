@@ -49,7 +49,9 @@ $prozent = ( $bandcount / $voteCount )*100;
 		@if($voteIsAllowed)
 		<p>Fülle einfach den Captcha aus und dein Vote wird gezählt!</p>
 		{{ Form::open(array('route' => 'votes.store')) }}
-		{{ Form::captcha(array('theme' => 'clean'))}}
+		{{-- Form::captcha(array('theme' => 'clean')) --}}
+		{{ HTML::image(Captcha::img(), 'Captcha image') }} 
+		{{ Form::text('captcha') }}
 		@else
 		<p>Leider hat das Voting hat noch nicht begonnen! </p>
 		@endif
@@ -59,7 +61,7 @@ $prozent = ( $bandcount / $voteCount )*100;
             {{ Form::hidden('user_id','',array('id'=>'bandID')) }}
             {{ Form::token() }}
             @if($voteIsAllowed)
-             {{ Form::submit('Jetzt voten!',array('class'=>"btn btn-primary")) }}
+            {{ Form::submit('Jetzt voten!',array('class'=>"btn btn-primary")) }}
             @endif
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
             

@@ -64,7 +64,7 @@ return array(
 	),
 	"unique"           => "Dieser Name existiert leider schon vergeben!",
 	"url"              => "Keine gültige URL",
-	"recaptcha" => 'Eingabe stimmt nicht überein.',
+	"captcha" => 'Eingabe stimmt nicht überein.',
 
 	/*
 	|--------------------------------------------------------------------------

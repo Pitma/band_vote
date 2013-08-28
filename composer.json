@@ -7,10 +7,12 @@
 		"edvinaskrucas/notification": "1.*",
 		"way/generators": "dev-master",
 		"symfony/http-foundation": "2.3.*",
-		"greggilbert/recaptcha": "dev-master"
+		"greggilbert/recaptcha": "dev-master",
+		"mews/captcha": "dev-master"
 	},
 	"require-dev":{
-		"way/guard-laravel": "dev-master"
+		"way/guard-laravel": "dev-master",
+		"phpunit/phpunit": "3.7.*@dev"
 		},
 	"autoload": {
 		"classmap": [

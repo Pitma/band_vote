@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>.::AMALIVE.de::. @yield('title')</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.3, maximum-scale=0.4">
+	<meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=0.5">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="robots" content="NOINDEX, NOFOLLOW">

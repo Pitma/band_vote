@@ -81,7 +81,8 @@ class UsersController extends BaseController {
                 'city' => Input::get('city'),
                 'telefon' => Input::get('telefon'),
                 'agb' => Input::get('agb'),
-                'recaptcha_response_field' => Input::get('recaptcha_response_field'),
+                //'recaptcha_response_field' => Input::get('recaptcha_response_field'),
+                'captcha' => Input::get('captcha'),
 
             );
         $picture_file = Input::file('picture');
