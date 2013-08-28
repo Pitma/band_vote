@@ -384,7 +384,7 @@ class UsersController extends BaseController {
         {
         
         $music_destinationPath = 'uploads/music/';
-        $music_filename = .str_random(13).'.'.$music_file->getClientOriginalName();
+        $music_filename = str_random(13).'.'.$music_file->getClientOriginalExtension();
         //$extension =$file->getClientOriginalExtension(); 
         $music_upload_success = Input::file('musica')->move($music_destinationPath, $music_filename);
 

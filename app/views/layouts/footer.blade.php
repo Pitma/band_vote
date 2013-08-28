@@ -12,7 +12,7 @@
       	 	<img src="http://placehold.it/200x60"> -->
 	      <ul class="inline text-center">
 	      	<li><a href="{{URL::to('kontakt')}}">Kontakt</a></li> |
-	      	<li><a href="{{URL::to('spielregeln')}}">Spielregeln</a></li> |
+	      	<li><a href="{{URL::to('spielregeln')}}">So funktioniert´s</a></li> |
 	      	<li><a href="#">Facebook</a></li> |
 	      	<li><a href={{ URL::to('guestbooks')}}>Gästebuch</a></li> |
 	      	<li><a href="{{URL::to('impressum')}}">Impressum</a></li>
