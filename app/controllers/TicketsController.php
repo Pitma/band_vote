@@ -23,14 +23,14 @@
     	 	'email' => Input::get('email'),
     	 	'ticketAmount' => Input::get('ticketAmount'),
     	 	'text' => Input::get('text'),
-            'recaptcha_response_field' => Input::get('recaptcha_response_field'),
+            'captcha' => Input::get('captcha'),
     	 	);
 
         $rules = array(
         	'name' => 'required',
             'email' => 'required|email',
             'ticketAmount' => 'required|numeric|between:1,20',
-            'recaptcha_response_field' => 'required|recaptcha',
+            'captcha' => 'required|captcha',
             );
 
         $messages = array(

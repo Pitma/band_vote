@@ -7,8 +7,7 @@
 
 	Herzlichen Glückwunsch zur erfolgreichen Erstellung des Bandprofils von:  <b>{{$name}}</b>.<br><br>
 
-	Bevor dein Profil online geht, wird es kurz von uns auf Richtigkeit und Vollständigkeit geprüft.<br>
-
+	Bevor dein Profil online geht, wird es kurz von uns auf Richtigkeit und Vollständigkeit geprüft. <br>
 	Sobald du die Freigabe-Email bekommst, ist das Profil online und du kannst los legen.<br><br>
 
 	

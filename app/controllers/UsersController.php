@@ -467,8 +467,74 @@ class UsersController extends BaseController {
         $this->layout->title = 'Passwort vergessen';
         $this->layout->content = View::make('users/forgot');
     }
+
+    public function spielregeln()
+    {
+        $this->layout->title = "so funktioniert's";
+        $this->layout->content = View::make('spielregeln');
+    }
+    public function agb()
+    {
+        $this->layout->title = "Allgemeine Geschäftsbedingungen";
+        $this->layout->content = View::make('agb');
+    }
+    public function kontakt_show()
+    {
+        $this->layout->title = "Kontaktformular";
+        $this->layout->content = View::make('contact');
+    }
+
+    public function kontakt_post()
+    {
+       $input = array(
+            'name' => Input::get('name'),
+            'email' => Input::get('email'),
+            'text' => Input::get('text'),
+            'captcha' => Input::get('captcha'),
+            );
+
+        $rules = array(
+            'name' => 'required',
+            'email' => 'required|email',
+            'text' => 'required',
+            'captcha' => 'required|captcha',
+            );
+
+       
+
+        $validation = Validator::make($input, $rules);
+
+         if($validation->fails())
+        {
+            Notification::error('Deine Nachricht konnte leider nicht übermittelt werden!');
+            
+            return Redirect::to('kontakt')
+                        ->withinput()
+                        ->witherrors($validation);
+        }
+
+
+
+
+        Mail::pretend(false);
+
+        Mail::send('emails.contact', $input, function($message)
+        {
+            $message->from('kontakt@amalive.de', 'Kontakt auf Amalive.de');
+            $message->to('juli-albrecht@t-online.de');
+            $message->subject('Kontaktaufnahme auf Amalive.de');
+        });
+
+
+        Notification::success('Deine Nachricht an uns wurde erfolgreich übermittelt!');
+        
+        return Redirect::to('/');
+
+    }
        
 }
+
+
 
     
 

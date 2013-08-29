@@ -1,5 +1,5 @@
 <body>
-	<h2>Freischaltung auf Amalive.de</h2>
+	<h2>Profil Freigabe Amalive.de</h2>
 
 	<h3>Hallo {{ $firstname }},</h3>
 
@@ -13,7 +13,7 @@ Du kannst dein Profil jederzeit aktualisieren und ergänzen um es für
 
 deine Fans und Voter attraktiv zu gestallten. 
 
-Das Voting starte am 07.10.2013 um 00:01 Uhr, ab dann hast du 4 Wochen Zeit 
+Das Voting startet am 07.10.2013 um 00:01 Uhr, ab dann hast du 4 Wochen Zeit 
 
 so viele Votes wie möglich zu Sammeln.
 

@@ -265,16 +265,17 @@
 
   
   
-  div.Vote_Item div>a.open-validateVote{
+div.Vote_Item div>a.open-validateVote{
+
     font-size: 18px;
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
-    color:#d5d6da;
+    color:rgba(0,0,0,0);
     height:18px;
     width:60px;
-    margin-top:-27px;
-    margin-right:2px;
-    background-color: #fff;
+    margin-top:-20px;
+    margin-right:10px;
+    background: transparent url('../img/votebtn.png') no-repeat;
   }
   div.Vote_Item div>span{
   margin-right: 40px;

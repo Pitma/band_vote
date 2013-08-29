@@ -16,12 +16,14 @@
 
 
     <h3>Herzlich Willkommen</h3>
+    <br>
 
-    <p>NRW braucht neue Musik</p>
-    <p>Und wo kann man diese beser präsentieren als in der LIVE MUSIC HALL Köln?<br>
-      Eine der Legendärsten Konzerhallen Deutschlands wartet auf euch. <br>
-      Meldet euch kostenlos an und lasst euch ohne Umwege direkt auf die große Bühne voten. <br>
-      Alle Teilnahmebedingungen findet ihr in unseren Spielregeln.
+    <p>NRW braucht neue Musik!!!</p>
+    <p>
+
+      Eine der legendärsten Konzerthallen Deutschlands wartet auf euch! <br>
+      Meldet euch jetzt kostenlos an und nutzt die Chance, euch ohne Umwege direkt auf die große Bühne der Live Music Hall Köln voten zu lassen. <br>
+      Bei uns entscheidet keine Jury es liegt in eurer Hand. Alle Teilnahmebedingungen sowie den gesamten Ablauf findet Ihr unter <a href="{{URL::to('spielregeln')}}">„So funktioniert´s“</a>.
 
     </p>
    	

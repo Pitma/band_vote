@@ -1,7 +1,12 @@
 @section('content')
 {{ Form::open(array('route' => 'users.store','class'=>'form-horizontale','files'=> true)) }}
 
-<h2>Band Registrierung</h2>
+<h3>Mitglied werden</h3>
+<p>Hier könnt ihr euch mit eurer Band kostenlos für die Teilnahme am Voting anmelden. 
+Mein Tipp: Füllt für ein aussagekräftiges Profil nicht nur die mit * gekennzeichneten Pflichtfelder aus. Je  besser ihr euch präsentiert, desto höher ist die Chance auf die große Bühne zu kommen. 
+Sobald ihr angemeldet seid, habt ihr jederzeit die Gelegenheit euer Profil beliebig zu ändern.
+Daten des persönlichen Ansprechpartners werden selbstverständlich nicht öffentlich gemacht, vertraulich behandelt und nicht an Dritte weitergegeben. 
+Detaillierte Informationen zur Anmeldung findet ihr unter <a href= {{  URL::to('spielregeln')  }}>"So funktioniert´s"</a> und den <a href={{ URL::to('agb')}}>AGB’s</a></p>
 
     <div class="control-group">   
             {{ Form::label('name', 'Name:', array('class'=>'control-label')) }}
@@ -129,7 +134,7 @@
 			
 		<div class="control-group"> 
             <div class ="controls">
-            <label class="checkbox" for="agb">Ich habe die <a href="{{URL::to('spielregeln')}}" target="_blank">AGB's</a> gelesen und Akzeptiere diese!
+            <label class="checkbox" for="agb">Ich habe die <a href="{{URL::to('agb')}}" target="_blank">AGB's</a> gelesen und Akzeptiere diese!
             {{ Form::checkbox('agb') }} 
             </label>    
          {{ $errors->first('agb','<span class="text-error">:message</span>') }}   

@@ -31,15 +31,12 @@ Route::post('admin/aktivieren',array('as'=>'activate','uses' => 'AdminsControlle
 Route::get('admin/votingdetails',array('as'=>'details','uses' => 'AdminsController@VotesDetails'));
 
 
-Route::get('kontakt',function(){
-	Notification::info('Der Kontaktbereich ist noch nicht online!');
-	return Redirect::to('/');
-});
+Route::get('kontakt',array('as'=>'kontakt','uses' => 'UsersController@kontakt_show'));
+Route::post('kontakt',array('as'=>'kontakt.post','uses' => 'UsersController@kontakt_post'));
 
-Route::get('spielregeln',function(){
-	Notification::info('Die Spielregeln sind noch nicht online!');
-	return Redirect::to('/');
-});
+Route::get('spielregeln',array('as'=>'spielregeln','uses' => 'UsersController@spielregeln'));
+Route::get('agb',array('as'=>'agb','uses' => 'UsersController@agb'));
+
 Route::get('impressum',function(){
 	Notification::info('Das Impressum ist noch nicht online!');
 	return Redirect::to('/');

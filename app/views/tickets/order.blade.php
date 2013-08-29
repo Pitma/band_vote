@@ -1,8 +1,17 @@
 @section('content')
 
-<h2>Tickets</h2>
+<h3>Tickets</h3>
+<br>
+<p>So einfach geht es. <br><br>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quis, magnam, quibusdam deleniti exercitationem reprehenderit ab possimus minima accusamus soluta provident dolor quam quisquam esse voluptas sequi totam nesciunt. Eius.</p>
+Gib deinen vollständigen Namen, deine Emailadresse und deine gewünschte Ticketanzahl an. <br>
+Falls du noch eine Frage hast kannst du diese in das Feld Sonstiges schreiben. <br> 
+Wenn du die Anfrage abgeschickt hast, erhältst du von uns eine Bestätigungsmail. Nach der Bearbeitung deiner Anfrage bekommst du eine E-Mail mit der Reservierungsbestätigung, dem Preis, der Ticketnummer und einer Bankverbindung. Sobald das Geld auf dem angegebenen Konto eingegangen ist, bekommst du deine elektronischen Tickets via E-Mail. Jedes Ticket hat einen einmaligen QR-Code. 
+
+<br><br> Die Tickets kannst du ausdrucken oder per Smartphone am Eingang vorzeigen.
+
+</p>
+<br>
 
 {{Form::open(array('route'=>'tickets.order.post'))}}
 
@@ -38,8 +47,9 @@
     </div>
 <div class="control-group">  
         <div class="controls">
-                {{ Form::captcha(array('theme' => 'clean'))}}
-                {{ $errors->first('recaptcha_response_field','<span class="text-error">:message</span>') }}
+                {{ HTML::image(Captcha::img(), 'Captcha image') }} 
+                {{ Form::text('captcha') }}
+                {{ $errors->first('captcha','<span class="text-error">:message</span>') }}
         </div>
     </div>
 

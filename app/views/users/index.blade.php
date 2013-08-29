@@ -1,10 +1,15 @@
 @extends('layouts.master')
 @section('content')
 <?php $count1 = 1;?>
-<p><b> IHR gestaltet das Konzert. <br>
-Jeder hat pro Tag 2 Stimmen zu vergeben. <br>
-Die vier Bands mit den meisten Votes kommen ohne Umwege auf die große Bühne, <br>
-und treten in die Fußstapfen von...</b></p>
+<h3>Voting</h3>
+<br>
+<p><strong>IHR gestaltet das Konzert!</strong><br>
+Checkt die Profile der Bands und votet, mit zwei Stimmen pro Person und pro Tag, für euren Favoriten. <br> 
+Die vier Bands mit den meisten Stimmen gewinnen den Auftritt auf der großen Bühne der Live Music Hall.</p>
+
+
+
+
 {{ $bands->addQuery('order',$order)->links() }}
 
 
@@ -25,13 +30,17 @@ $bandcount = Vote::where('user_id',$band->id)->count();
 $prozent = ( $bandcount / $voteCount )*100;
 ?>
 <div class="Vote_Item">
+	
 	<div class="position">{{ sprintf( "%02d",$count1) }}</div>
 	<p><a href="{{ URL::to('users/'.$band->id)}}">{{ $band->name }}</a></p>
 	<span><b>{{ $band->genre . '</b> aus ' . $band->origin }}</span>
+
 	<div class="pull-right">
 		<span class="">{{round($prozent,2)}} %</span>
+		
 		<a href="#validateVote" role="button" class="open-validateVote" data-toggle="modal" data-id="{{$band->id}}" data-name="{{$band->name}}">vote!</a>
-</div>
+		
+	</div>
 	</div>
 	
 	
